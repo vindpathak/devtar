@@ -1,78 +1,84 @@
-import React from 'react';
-
-export default function DevtarPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-100">
-      <header className="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">Devtar</h1>
-          <p className="mt-2 text-base text-gray-300">An international-level mythic hero for a new generation</p>
-        </div>
-        <nav className="space-x-4 text-sm text-gray-300 mt-4 md:mt-0">
-          <a href="#about" className="hover:text-white">About</a>
-          <a href="#bio" className="hover:text-white">Character</a>
-          <a href="#gallery" className="hover:text-white">Gallery</a>
-          <a href="#book" className="hover:text-white">Book</a>
-          <a href="#author" className="hover:text-white">Author</a>
-        </nav>
-      </header>
-
-      <main className="max-w-6xl mx-auto px-6">
-        {/* Hero */}
-        <section className="text-center py-12">
-          <h2 className="text-4xl md:text-5xl font-bold">The Legend of Devtar</h2>
-          <p className="mt-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-            Major Dev Rawat carries an ancient demonic element in his veins. Children, teens, and young readers will find a thrilling, larger-than-life character whose battles are both epic and human — standing tall against Asuras, enemies of the nation, and the darkness within.
-          </p>
-        </section>
-
-        {/* Gallery */}
-        <section id="gallery" className="py-10 border-t border-gray-800">
-          <h3 className="text-2xl font-bold text-center">Gallery — The World of Devtar</h3>
-          <p className="mt-3 text-gray-400 text-center">Visual moments from the story to inspire imagination and courage.</p>
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {["/mnt/data/14.png", "/mnt/data/12.png", "/mnt/data/ChatGPT Image May 8, 2025, 12_15_51 AM.png", "/mnt/data/ChatGPT Image May 24, 2025, 10_04_49 PM.png", "/mnt/data/yeti2.png", "/mnt/data/Your paragraph text.jpg"].map((src, i) => (
-              <img key={i} src={src} alt={`Devtar scene ${i+1}`} className="w-full h-64 object-cover rounded-2xl shadow-lg" />
-            ))}
-          </div>
-        </section>
-
-        {/* About */}
-        <section id="about" className="py-12 border-t border-gray-800">
-          <h3 className="text-2xl font-bold">About Devtar</h3>
-          <p className="mt-4 text-gray-300 leading-relaxed">
-            Devtar is not just a hero — he is a symbol of inner strength, sacrifice, and hope. The story blends myth and modernity, designed to resonate with both children and young adults, while offering the excitement of an international action-thriller.
-          </p>
-        </section>
-
-        {/* Bio */}
-        <section id="bio" className="py-12 border-t border-gray-800">
-          <h3 className="text-2xl font-bold">Character Bio — Major Dev Rawat</h3>
-          <p className="mt-4 text-gray-300 leading-relaxed">
-            A decorated army officer bound by destiny to the war between Devas and Asuras. His bloodline carries a fragment of an ancient Asura’s power, making him both a protector and a potential destroyer. For young readers, Dev stands as a reminder that courage comes from mastering one’s fears.
-          </p>
-        </section>
-
-        {/* Book */}
-        <section id="book" className="py-12 border-t border-gray-800 text-center">
-          <h3 className="text-2xl font-bold">Read the Book</h3>
-          <p className="mt-4 text-gray-300">Dive into the full adventure of Devtar in the book available on Kindle.</p>
-          <a href="https://www.amazon.in/dp/B0FNLQ419Z" target="_blank" rel="noopener noreferrer" className="mt-6 inline-block px-6 py-3 bg-indigo-600 rounded-xl font-semibold hover:bg-indigo-700">Get it on Kindle</a>
-        </section>
-
-        {/* Author */}
-        <section id="author" className="py-12 border-t border-gray-800 text-center">
-          <h3 className="text-2xl font-bold">About the Author</h3>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
-            Vinayak Pathak brings Devtar to life — blending myth, action, and philosophy into a gripping story that resonates with young and adult readers alike.
-          </p>
-          <a href="https://www.amazon.com/author/vindpathak" target="_blank" rel="noopener noreferrer" className="mt-6 inline-block px-6 py-3 border border-gray-600 rounded-xl hover:bg-gray-800">Visit Author Page</a>
-        </section>
-      </main>
-
-      <footer className="border-t border-gray-800 py-6 mt-6 text-center text-sm text-gray-400">
-        <div>© {new Date().getFullYear()} Devtar — An international mythic hero. All rights reserved.</div>
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devtar — A Modern Mythic Hero</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-black text-gray-100 min-h-screen">
+  <header class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Devtar</h1>
+      <p class="mt-2 text-base text-gray-300">An international-level mythic hero for a new generation</p>
     </div>
-  );
-}
+    <nav class="space-x-4 text-sm text-gray-300 mt-4 md:mt-0">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#bio" class="hover:text-white">Character</a>
+      <a href="#gallery" class="hover:text-white">Gallery</a>
+      <a href="#book" class="hover:text-white">Book</a>
+      <a href="#author" class="hover:text-white">Author</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6">
+    <!-- Hero -->
+    <section class="text-center py-12">
+      <h2 class="text-4xl md:text-5xl font-bold">The Legend of Devtar</h2>
+      <p class="mt-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        Major Dev Rawat carries an ancient demonic element in his veins. Children, teens, and young readers will find a thrilling, larger-than-life character whose battles are both epic and human — standing tall against Asuras, enemies of the nation, and the darkness within.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-10 border-t border-gray-800">
+      <h3 class="text-2xl font-bold text-center">Gallery — The World of Devtar</h3>
+      <p class="mt-3 text-gray-400 text-center">Visual moments from the story to inspire imagination and courage.</p>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="14.png" alt="Devtar scene 1" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+        <img src="12.png" alt="Devtar scene 2" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+        <img src="ChatGPT Image May 8, 2025, 12_15_51 AM.png" alt="Devtar scene 3" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+        <img src="ChatGPT Image May 24, 2025, 10_04_49 PM.png" alt="Devtar scene 4" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+        <img src="yeti2.png" alt="Devtar scene 5" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+        <img src="Your paragraph text.jpg" alt="Devtar scene 6" class="w-full h-64 object-cover rounded-2xl shadow-lg" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 border-t border-gray-800">
+      <h3 class="text-2xl font-bold">About Devtar</h3>
+      <p class="mt-4 text-gray-300 leading-relaxed">
+        Devtar is not just a hero — he is a symbol of inner strength, sacrifice, and hope. The story blends myth and modernity, designed to resonate with both children and young adults, while offering the excitement of an international action-thriller.
+      </p>
+    </section>
+
+    <!-- Bio -->
+    <section id="bio" class="py-12 border-t border-gray-800">
+      <h3 class="text-2xl font-bold">Character Bio — Major Dev Rawat</h3>
+      <p class="mt-4 text-gray-300 leading-relaxed">
+        A decorated army officer bound by destiny to the war between Devas and Asuras. His bloodline carries a fragment of an ancient Asura’s power, making him both a protector and a potential destroyer. For young readers, Dev stands as a reminder that courage comes from mastering one’s fears.
+      </p>
+    </section>
+
+    <!-- Book -->
+    <section id="book" class="py-12 border-t border-gray-800 text-center">
+      <h3 class="text-2xl font-bold">Read the Book</h3>
+      <p class="mt-4 text-gray-300">Dive into the full adventure of Devtar in the book available on Kindle.</p>
+      <a href="https://www.amazon.in/dp/B0FNLQ419Z" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block px-6 py-3 bg-indigo-600 rounded-xl font-semibold hover:bg-indigo-700">Get it on Kindle</a>
+    </section>
+
+    <!-- Author -->
+    <section id="author" class="py-12 border-t border-gray-800 text-center">
+      <h3 class="text-2xl font-bold">About the Author</h3>
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        Vinayak Pathak brings Devtar to life — blending myth, action, and philosophy into a gripping story that resonates with young and adult readers alike.
+      </p>
+      <a href="https://www.amazon.com/author/vindpathak" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block px-6 py-3 border border-gray-600 rounded-xl hover:bg-gray-800">Visit Author Page</a>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-800 py-6 mt-6 text-center text-sm text-gray-400">
+    <div>© 2025 Devtar — An international mythic hero. All rights reserved.</div>
+  </footer>
+</body>
+</html>
