@@ -6,6 +6,31 @@
   <title>Devtar — A Modern Mythic Hero</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
+  <script>
+  const planets = document.querySelectorAll(".planet");
+  const descBox = document.getElementById("planet-desc");
+
+  // Default = Earth active
+  let activePlanet = planets[0];
+  descBox.innerText = activePlanet.dataset.desc;
+  activePlanet.style.transform = "scale(1.5)";
+
+  planets.forEach(planet => {
+    planet.addEventListener("click", () => {
+      // reset previous
+      activePlanet.style.transform = "scale(1)";
+      activePlanet.style.zIndex = "1";
+
+      // set new active
+      activePlanet = planet;
+      descBox.innerText = planet.dataset.desc;
+      planet.style.transform = "scale(1.5)";
+      planet.style.zIndex = "10";
+    });
+  });
+</script>
+  
 <body class="bg-[url('bg1.png')] bg-cover bg-center text-gray-100 min-h-screen">
   <header class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between">
     <div>
@@ -29,6 +54,33 @@
         Major Dev Rawat carries an ancient demonic element in his veins. Children, teens, and young readers will find a thrilling, larger-than-life character whose battles are both epic and human — standing tall against Asuras, enemies of the nation, and the darkness within.
       </p>
     </section>
+
+<section id="planets" class="py-16 border-t border-gray-800 text-center">
+  <h3 class="text-3xl font-bold mb-8">The Three Realms</h3>
+  
+  <div id="planet-container" class="flex justify-center items-center space-x-6 relative">
+    <!-- Earth -->
+    <div class="planet" data-name="Earth" data-desc="Earth (Prithvi Lok) inhabited by humans. 6 out of 7 immortals yahi rehte hain aur devtao ke raja Indra isko protect karte hain. Yaha ke log ishwar mein vishwas karte hain aur use alag alag roop mein poojte hain."
+      style="width:200px; height:200px; background: radial-gradient(circle at 30% 30%, #2d8cff, #001f4d); border-radius:50%; cursor:pointer; box-shadow:0 0 25px #3fa9ff;">
+      <span class="absolute text-white font-bold text-lg w-full text-center animate-pulse">Earth</span>
+    </div>
+
+    <!-- Sutal -->
+    <div class="planet" data-name="Sutal" data-desc="Sutal — ek sampanna duniya jahan asur rehte hain jinme dharm basta hai. Ye ishwar mein astha rakhte hain aur inke raja Mahabali (Bali) 7th immortal hain. Ye duniya crystals aur 85% paani se chamakti hai."
+      style="width:100px; height:100px; background: radial-gradient(circle at 30% 30%, #66ffcc, #003333); border-radius:50%; cursor:pointer; box-shadow:0 0 20px #66ffe0;">
+      <span class="absolute text-white font-bold text-sm w-full text-center animate-pulse">Sutal</span>
+    </div>
+
+    <!-- Patal -->
+    <div class="planet" data-name="Patal" data-desc="Patal — yaha asuro ko bhagwan Vishnu dwara dhakel diya gaya tha. Ye asur adharm failate hain aur devtao ko haraana chahte hain, kuchh to swayam Vishnu ko bhi."
+      style="width:100px; height:100px; background: radial-gradient(circle at 30% 30%, #ff4444, #220000); border-radius:50%; cursor:pointer; box-shadow:0 0 20px #ff3333;">
+      <span class="absolute text-white font-bold text-sm w-full text-center animate-pulse">Patal</span>
+    </div>
+  </div>
+
+  <!-- Description Box -->
+  <div id="planet-desc" class="max-w-3xl mx-auto mt-10 text-gray-300 text-lg"></div>
+</section>
 
     <!-- Gallery -->
     <section id="gallery" class="py-10 border-t border-gray-800">
