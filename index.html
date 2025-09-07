@@ -1,55 +1,123 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devtar — Interactive Planets</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background: black; color: white; }
-    .planet-label { text-shadow: 0 0 10px #fff, 0 0 20px #0ff; }
-  </style>
-</head>
-<body class="text-gray-100 min-h-screen">
-  <header class="text-center py-6">
-    <h1 class="text-4xl font-bold">Devtar — The Three Realms</h1>
-  </header>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Devtar — A Modern Mythic Hero</title>
+      <script src="https://cdn.tailwindcss.com"></script> 
+   </head>
+   <body class="bg-[url('bg1.png')] bg-cover bg-center text-gray-100 min-h-screen">
+      <header class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between">
+         <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Devtar</h1>
+            <p class="mt-2 text-base text-gray-300">A New Indian Super Hero</p>
+         </div>
+         <nav class="space-x-4 text-sm text-gray-300 mt-4 md:mt-0"> <a href="#about" class="hover:text-white">About</a> <a href="#bio" class="hover:text-white">Character</a> <a href="#gallery" class="hover:text-white">Gallery</a> <a href="#book" class="hover:text-white">Book</a> <a href="#author" class="hover:text-white">Author</a> </nav>
+      </header>
+      <main class="max-w-6xl mx-auto px-6">
+         <!-- Hero --> 
+         <section class="text-center py-12">
+            <h2 class="text-4xl md:text-5xl font-bold">The Legend of Devtar</h2>
+            <p class="mt-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto"> Major Dev Rawat carries an ancient demonic element in his veins. Children, teens, and young readers will find a thrilling, larger-than-life character whose battles are both epic and human — standing tall against Asuras, enemies of the nation, and the darkness within. </p>
+         </section>
+         <!-- Gallery --> 
+         <section id="gallery" class="py-10 border-t border-gray-800">
+            <h3 class="text-2xl font-bold text-center">Gallery — The World of Devtar</h3>
+            <p class="mt-3 text-gray-400 text-center">Visual moments from the story to inspire imagination and courage.</p>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+               <!--img src="14.png" alt="Devtar scene 1" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="14.png" target="_blank"> <img src="14.png" alt="Devtar scene 1" class="w-full rounded-2xl shadow-lg" /> </a> <!--img src="12.png" alt="Devtar scene 2" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="1.png" target="_blank"> <img src="1.png" alt="Devtar scene 2" class="w-full rounded-2xl shadow-lg" /> </a> <!--img src="img1.png" alt="Devtar scene 3" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="img1.png" target="_blank"> <img src="img1.png" alt="Devtar scene 3" class="w-full rounded-2xl shadow-lg" /> </a> <!--img src="bg1.png" alt="Devtar scene 4" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="bg1.png" target="_blank"> <img src="bg1.png" alt="Devtar scene 4" class="w-full rounded-2xl shadow-lg" /> </a> <!--img src="yeti2.png" alt="Devtar scene 5" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="prm1.png" target="_blank"> <img src="prm1.png" alt="Devtar scene 5" class="w-full rounded-2xl shadow-lg" /> </a> <!--img src="img3.jpg" alt="Devtar scene 6" class="w-full h-64 object-cover rounded-2xl shadow-lg" --> <a href="img3.jpg" target="_blank"> <img src="img3.jpg" alt="Devtar scene 6" class="w-full rounded-2xl shadow-lg" /> </a> 
+            </div>
+         </section>
 
-  <main class="flex flex-col items-center">
-    <section id="planets" class="py-16 text-center">
-      <div id="planet-container" class="flex justify-center items-center space-x-6 relative">
-        <div class="planet" id="earth" data-desc="Earth (Prithvi Lok) inhabited by humans. 6 out of 7 immortals live here. Indra protects it."
-          style="width:200px; height:200px; background:url('earth.png') center/cover; border-radius:50%; cursor:pointer;">
-          <span class="planet-label block mt-2">Earth</span>
+        <!-- Planets Explorer -->
+    <section id="realms" class="relative py-20 border-t border-gray-800">
+      <h3 class="text-3xl font-bold text-center mb-12">The Three Realms</h3>
+      <div class="relative flex justify-center items-center space-x-8 h-[500px]">
+        <!-- Earth -->
+        <div class="planet active" data-planet="earth">
+          <img src="earth.png" alt="Earth" class="planet-img w-64 transition-all duration-700 cursor-pointer">
+          <div class="text-center mt-4">
+            <h4 class="planet-name text-xl font-bold text-blue-400 animate-pulse">Earth</h4>
+            <p class="planet-desc mt-2 text-gray-300 hidden max-w-sm mx-auto">
+              Earth (Prithvi Lok), inhabited by humans. 6 out of 7 immortals live here and
+              Indra, king of the Devas, protects it. People here believe in God and worship
+              in different forms and ways.
+            </p>
+          </div>
         </div>
-        <div class="planet" id="sutal" data-desc="Sutal — oceanic world, crystal continent, ruled by Mahabali (7th immortal)."
-          style="width:120px; height:120px; background:url('sutal.png') center/cover; border-radius:50%; cursor:pointer;">
-          <span class="planet-label block mt-2">Sutal</span>
+
+        <!-- Patal -->
+        <div class="planet" data-planet="patal">
+          <img src="patal.png" alt="Patal" class="planet-img w-32 opacity-70 transition-all duration-700 cursor-pointer">
+          <div class="text-center mt-4">
+            <h4 class="planet-name text-xl font-bold text-red-400 animate-pulse">Patal</h4>
+            <p class="planet-desc mt-2 text-gray-300 hidden max-w-sm mx-auto">
+              Patal — realm where Asuras were banished by Lord Vishnu. These Asuras spread
+              adharma and aim to defeat the Devas. Some even wish to conquer Vishnu himself.
+            </p>
+          </div>
         </div>
-        <div class="planet" id="patal" data-desc="Patal — banished asuras dwell here, red gases swirl in its skies."
-          style="width:120px; height:120px; background:url('patal.png') center/cover; border-radius:50%; cursor:pointer;">
-          <span class="planet-label block mt-2">Patal</span>
+
+        <!-- Sutal -->
+        <div class="planet" data-planet="sutal">
+          <img src="sutal.png" alt="Sutal" class="planet-img w-32 opacity-70 transition-all duration-700 cursor-pointer">
+          <div class="text-center mt-4">
+            <h4 class="planet-name text-xl font-bold text-green-400 animate-pulse">Sutal</h4>
+            <p class="planet-desc mt-2 text-gray-300 hidden max-w-sm mx-auto">
+              Sutal — land of righteous Asuras. They believe in dharma and live in prosperity.
+              Their king is Mahabali (Bali), the 7th immortal.
+            </p>
+          </div>
         </div>
       </div>
-      <div id="planet-desc" class="max-w-2xl mx-auto mt-10 text-lg text-gray-300"></div>
     </section>
-  </main>
 
-  <script>
-    const planets = document.querySelectorAll('.planet');
-    const descBox = document.getElementById('planet-desc');
-    let activePlanet = document.getElementById('earth');
-    descBox.innerText = activePlanet.dataset.desc;
-    activePlanet.style.transform = "scale(1.5)";
+    <script>
+      // Planet interaction
+      document.querySelectorAll(".planet").forEach((planet) => {
+        planet.addEventListener("click", () => {
+          // Reset all
+          document.querySelectorAll(".planet").forEach((p) => {
+            p.querySelector(".planet-img").classList.remove("w-64");
+            p.querySelector(".planet-img").classList.add("w-32", "opacity-70");
+            p.querySelector(".planet-desc").classList.add("hidden");
+            p.classList.remove("active");
+          });
 
-    planets.forEach(planet => {
-      planet.addEventListener('click', () => {
-        activePlanet.style.transform = "scale(1)";
-        activePlanet = planet;
-        planet.style.transform = "scale(1.5)";
-        descBox.innerText = planet.dataset.desc;
+          // Activate clicked planet
+          planet.querySelector(".planet-img").classList.remove("w-32", "opacity-70");
+          planet.querySelector(".planet-img").classList.add("w-64");
+          planet.querySelector(".planet-desc").classList.remove("hidden");
+          planet.classList.add("active");
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+        
+         <!-- About --> 
+         <section id="about" class="py-12 border-t border-gray-800">
+            <h3 class="text-2xl font-bold">About Devtar</h3>
+            <p class="mt-4 text-gray-300 leading-relaxed"> Devtar is not just a hero — he is a symbol of inner strength, sacrifice, and hope. The story blends myth and modernity, designed to resonate with both children and young adults, while offering the excitement of an international action-thriller. </p>
+         </section>
+         <!-- Bio --> 
+         <section id="bio" class="py-12 border-t border-gray-800">
+            <h3 class="text-2xl font-bold">About DEVTAR Saga</h3>
+            <p class="mt-4 text-gray-300 leading-relaxed"> A universe is awakening… Where gods, demons, and soldiers walk the same battlefield. Three realms. One destiny. The Asuras — banished thousands of years ago — are returning. The Earth trembles, the forgotten realm stirs, and a hidden world still guards secrets no human has seen. This is not just one story. It is the beginning of a mythic universe, an epic saga told through a series of novels — where Hindu mythology blends with modern warfare, and ancient legends shape the battles of today. The war for tomorrow has already begun. </p>
+         </section>
+         <!-- Book --> 
+         <section id="book" class="py-12 border-t border-gray-800 text-center">
+            <h3 class="text-2xl font-bold">Read the Book</h3>
+            <p class="mt-4 text-gray-300">Dive into the full adventure of Devtar in the book available on Kindle.</p>
+            <a href="https://www.amazon.in/dp/B0FNLQ419Z" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block px-6 py-3 bg-indigo-600 rounded-xl font-semibold hover:bg-indigo-700">Get it on Kindle</a> 
+         </section>
+         <!-- Author --> 
+         <section id="author" class="py-12 border-t border-gray-800 text-center">
+            <h3 class="text-2xl font-bold">About the Author</h3>
+            <p class="mt-4 text-gray-300 max-w-2xl mx-auto"> Vinayak Pathak brings Devtar to life — blending myth, action, and philosophy into a gripping story that resonates with young and adult readers alike. </p>
+            <a href="https://www.amazon.com/author/vindpathak" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block px-6 py-3 border border-gray-600 rounded-xl hover:bg-gray-800">Visit Author Page</a> 
+         </section>
+      </main>
+      <footer class="border-t border-gray-800 py-6 mt-6 text-center text-sm text-gray-400">
+         <div>© 2025 Devtar — An international mythic hero. All rights reserved.</div>
+      </footer>
+   </body>
 </html>
